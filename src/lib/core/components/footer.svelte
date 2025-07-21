@@ -92,7 +92,7 @@
 					+91 6370888479
 				</a>
 				<a
-					href="mailto:support@hellocall.ai"
+					href="mailto:lampvoltoffice@gmail.com"
 					class="hover:text-primary-500 flex items-center justify-center gap-2 text-sm transition lg:items-start lg:justify-start"
 				>
 					<Icon path={mdiEmailOutline} className="h-4 w-4" />

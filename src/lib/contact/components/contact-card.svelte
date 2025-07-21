@@ -15,7 +15,7 @@
 			</div>
 			<div class="flex-1 text-left">
 				<p class="text-base-100 text-lg font-medium md:text-xl">Email</p>
-				<a href="mailto:support@hellocall.ai" class="text-base-400 text-sm md:text-lg">
+				<a href="mailto:lampvoltoffice@gmail.com" class="text-base-400 text-sm md:text-lg">
 					lampvoltoffice@gmail.com
 				</a>
 				<!-- <p class="text-sm text-base-400 md:text-lg">support@hellocall.ai</p> -->
