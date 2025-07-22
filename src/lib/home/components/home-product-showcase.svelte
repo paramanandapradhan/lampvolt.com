@@ -51,8 +51,8 @@
 	});
 </script>
 
-<div class="min-h-screen bg-primary-100 px-4 py-12 sm:px-8 md:px-16 lg:px-32">
-	<h1 class="product-heading mb-10 text-4xl font-extrabold text-base-800">
+<div class="min-h-screen bg-base-900 px-4 py-12 sm:px-8 md:px-16 lg:px-32">
+	<h1 class="product-heading mb-10 text-4xl font-extrabold text-base-200">
 		Explore Our Collection
 	</h1>
 	<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">

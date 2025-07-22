@@ -1,9 +1,9 @@
 <script lang="ts">
 </script>
 
-<div  class="mx-4 md:mx-16 lg:mx-32 my-6 md:my-6 lg:my-12  ">
+<div class="mx-4 my-6 md:mx-16 lg:mx-32 lg:my-16">
 	<h2 class="mb-8 text-4xl font-bold text-base-200">Trending Categories</h2>
-	<div class="space-y-4">
+	<div class="grid grid-cols-1 gap-4 lg:grid-cols-3">
 		<div class="category-item flex items-center text-base-300">
 			<span class="mr-4 text-xl text-primary-500">01</span>
 			<span class="text-xl hover:text-primary-600">Motor Sensors</span>

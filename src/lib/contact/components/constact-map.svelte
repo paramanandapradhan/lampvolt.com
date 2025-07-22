@@ -1,4 +1,4 @@
-<div class="container mx-auto py-12 md:py-16 px-4 md:px-16 lg:px-32">
+<div class="container mx-auto py-12 md:py-16 ">
 	<div class="w-full overflow-hidden relative aspect-[16/9]">
 		<!-- svelte-ignore a11y_missing_attribute -->
 		<iframe

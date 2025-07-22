@@ -10,8 +10,8 @@
 	let {
 		hasBack,
 		disabledLogo,
-		logoImgSrc = 'lampvolt-logo.svg',
-		logoImgClassName= '!h-8 !w-auto !object-contain !filter !brightness-0 !invert',
+		logoImgSrc = 'lvt-logo2.svg',
+		logoImgClassName= '!h-6 !w-auto !object-contain !filter !brightness-0 !invert',
 		className = ' bg-gradient-to-r from-base-900 to-base-800 !h-20 border-b border-base-700',
 		hasLogo,
 		hasTitle,

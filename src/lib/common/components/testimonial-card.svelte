@@ -47,10 +47,10 @@
 			}
 		});
 
-		// Animation for testimonial cards - left to right one by one
+		// Animation for testimonial cards - down to up one by one
 		gsap.from('.testimonial-card', {
 			opacity: 0,
-			x: -100,
+			y: 100, // Changed from x: -100 to y: 100 for down-to-up animation
 			duration: 1.2,
 			ease: 'power3.out',
 			stagger: 0.3,
@@ -63,13 +63,15 @@
 	});
 </script>
 
-<div class="mx-4 mt-12 lg:mt-32 min-h-screen md:mx-16">
-	<h1 class="testimonial-heading mb-10 text-3xl font-bold text-base-200 sm:text-4xl">Customer Testimonials</h1>
+<div class="mx-4 my-8 md:mx-16 lg:my-16">
+	<h1 class="testimonial-heading mb-16 text-3xl font-bold text-base-200 sm:text-4xl">
+		Customer Testimonials
+	</h1>
 
-	<div class="testimonial-grid grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+	<div class="testimonial-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 pb-12">
 		{#each testimonials as testimonial, index}
 			<div
-				class="testimonial-card relative box-border flex w-full flex-col overflow-hidden rounded-xl bg-white shadow-lg"
+				class="testimonial-card relative box-border flex w-full flex-col overflow-hidden rounded-xl bg-base-800 shadow-lg"
 			>
 				<div class="flex items-center gap-4 p-6">
 					<img
@@ -78,12 +80,12 @@
 						alt="{testimonial.name}'s Photo"
 					/>
 					<div>
-						<h6 class="text-lg font-semibold text-gray-800">{testimonial.name}</h6>
-						<p class="text-sm text-gray-500">{testimonial.position}</p>
+						<h6 class="text-lg font-semibold text-base-200">{testimonial.name}</h6>
+						<p class="text-sm text-base-400">{testimonial.position}</p>
 					</div>
 				</div>
-				<div class="flex-1 bg-gray-50 p-6">
-					<p class="italic text-gray-600">{testimonial.text}</p>
+				<div class="flex-1 bg-base-700 p-6">
+					<p class="italic text-base-300">{testimonial.text}</p>
 				</div>
 				<div class="absolute right-4 top-4 h-3 w-3 rounded-full bg-primary-500"></div>
 			</div>

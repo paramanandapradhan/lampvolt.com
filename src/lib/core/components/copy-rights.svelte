@@ -10,8 +10,8 @@
 		</div>
 		<div class="mt-8 md:order-1 md:mt-0">
 			<p class="text-center text-xs leading-5 text-base-300">
-				<span>&copy; 2024 </span>
-				<a href="https://hellocall.ai" target="_blank">hellocall.ai</a>.
+				<span>&copy; 2025 </span>
+				<a href="https://Lampvolt.com" target="_blank">Lampvolt.com</a>.
 				<span>All rights reserved.</span>
 			</p>
 		</div>

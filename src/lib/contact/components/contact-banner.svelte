@@ -5,7 +5,7 @@
 <div class="relative min-h-screen">
 	<!-- Background Image -->
 	<div
-		class="absolute inset-0 -z-10 h-full w-full bg-cover bg-center"
+		class="absolute inset-0 -z-10 w-full bg-cover bg-center"
 		style="background-image: url(/imgs/contact-bg-1.webp);"
 	></div>
 

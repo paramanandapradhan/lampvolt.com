@@ -67,9 +67,9 @@
 		class="parallax-container absolute inset-0 bg-cover bg-center"
 		style="background-image: url('/imgs/home-image2.avif'); opacity: 0.7;"
 	></div>
-	<div class="numbers-container relative z-10 flex min-h-screen flex-col items-center justify-center lg:justify-start my-12">
+	<div class="numbers-container relative z-10 flex min-h-screen flex-col items-center justify-center lg:justify-start my-12 lg:my-32">
 		<h1
-			class="number-heading mb-16 text-center text-2xl font-bold text-base-200 sm:text-3xl md:text-4xl lg:text-5xl"
+			class="number-heading mb-24 text-center text-2xl font-bold text-base-200 sm:text-3xl md:text-4xl lg:text-5xl"
 		>
 			We Take Pride in Our Numbers
 		</h1>
