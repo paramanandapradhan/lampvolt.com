@@ -65,12 +65,12 @@
 				rel={menu.isExternal ? 'noopener noreferrer' : undefined}
 				class="{activeMenu === menu.id
 					? 'text-primary-300 font-bold'
-					: 'text-base-100'} after:bg-primary-400 hover:text-primary-400 relative h-full px-4 py-2 pt-7 backdrop-blur-md
+					: 'text-base-100 font-bold'} after:bg-primary-400 hover:text-primary-400 relative h-full px-4 py-2 pt-7 backdrop-blur-md
 			transition-colors duration-300 after:absolute after:bottom-[-4px] after:left-1/2 after:h-[2px]
 			after:w-[80%] after:-translate-x-1/2 after:transition-transform after:duration-300 after:content-['']
 			{activeMenu === menu.id
 					? 'after:bg-primary-300 font-bold after:scale-x-100'
-					: 'font-thin after:scale-x-0'} 
+					: 'font-bold after:scale-x-0'} 
 			hover:after:scale-x-100"
 				aria-current={activeMenu === menu.id ? 'page' : undefined}
 			>
