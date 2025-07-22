@@ -1,4 +1,5 @@
 <script lang="ts">
+	import CopyRights from '$lib/core/components/copy-rights.svelte';
 	import Footer from '$lib/core/components/footer.svelte';
 
 	import { goBack, Navbar } from '@cloudparker/moldex.js';
@@ -111,5 +112,8 @@
 
 	<section class="mt-3">
 		<Footer />
+	</section>
+	<section class="mt-3">
+		<CopyRights />
 	</section>
 </div>

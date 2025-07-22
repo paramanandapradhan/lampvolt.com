@@ -71,7 +71,7 @@
 			{activeMenu === menu.id
 					? 'after:bg-primary-300 font-bold after:scale-x-100'
 					: 'font-bold after:scale-x-0'} 
-			hover:after:scale-x-100"
+			hover:after:scale-x-100 uppercase"
 				aria-current={activeMenu === menu.id ? 'page' : undefined}
 			>
 				{menu.title}
@@ -113,7 +113,7 @@
 			{#each pageMenus as menu (menu.id)}
 				<a
 					href={menu.url}
-					class="{activeMenu === menu.id ? 'text-primary-600 font-bold' : 'text-base-100'} ..."
+					class="{activeMenu === menu.id ? 'text-primary-600 font-bold' : 'text-base-100'} uppercase"
 					aria-current={activeMenu === menu.id ? 'page' : undefined}
 				>
 					{menu.title}
