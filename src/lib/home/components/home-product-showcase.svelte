@@ -3,11 +3,10 @@
 	import { gsap } from 'gsap';
 	import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-	// Register ScrollTrigger plugin
 	gsap.registerPlugin(ScrollTrigger);
 
 	onMount(() => {
-		// Animation for h1 (Explore Our Collection) - down to up
+		// Animate heading
 		gsap.from('.product-heading', {
 			opacity: 0,
 			y: 50,
@@ -20,9 +19,9 @@
 			}
 		});
 
-		// Animation for grid items - alternating left to right and right to left
+		// Animate each card
 		gsap.utils.toArray<HTMLElement>('.product-card').forEach((card, index) => {
-			const xDirection = index % 2 === 0 ? -100 : 100; // Even index: left to right, Odd index: right to left
+			const xDirection = index % 2 === 0 ? -100 : 100;
 			gsap.from(card, {
 				opacity: 0,
 				x: xDirection,
@@ -36,7 +35,7 @@
 			});
 		});
 
-		// Animation for Shop Now button - down to up
+		// Animate CTA
 		gsap.from('.shop-now', {
 			opacity: 0,
 			y: 50,
@@ -48,6 +47,19 @@
 				toggleActions: 'play none none none'
 			}
 		});
+
+		// Hover video play/pause
+		gsap.utils.toArray<HTMLElement>('.product-card').forEach((card) => {
+			const video = card.querySelector('video');
+			if (video) {
+				card.addEventListener('mouseenter', () => {
+					video.play();
+				});
+				card.addEventListener('mouseleave', () => {
+					video.pause();
+				});
+			}
+		});
 	});
 </script>
 
@@ -55,109 +67,53 @@
 	<h1 class="product-heading mb-10 text-4xl font-extrabold text-base-200">
 		Explore Our Collection
 	</h1>
-	<div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
-		<div class="product-card rounded-xl bg-gray-800 bg-opacity-90 text-base-200 shadow-xl backdrop-blur-sm">
-			<div class="mt-2">
-				<img
-					src="/imgs/about-img.webp"
-					alt="product 1"
-					class="h-auto w-full rounded-t-xl object-cover"
-				/>
-				<h1 class="mt-2 text-center text-lg font-bold">₹ 9999</h1>
-			</div>
-			<div class="px-6 py-6 md:px-10 md:py-10 lg:px-16 lg:py-16">
-				<h2 class="mb-2 text-lg font-bold">Motor Sensor Advanced Model 3 Phase Motor</h2>
-				<div class="mb-1 text-sm">
-					<span class="font-semibold text-base-400">NAME OF PRODUCT: </span>
-					<span class="font-bold text-base-300">LAV Advanced Model</span>
+
+	<div class="grid grid-cols-1 items-stretch gap-4 lg:grid-cols-2">
+		{#each [{ img: '/imgs/about-img.webp', video: '/video/home-video5.mp4', price: '₹ 9999', title: 'Motor Sensor Advanced Model 3 Phase Motor', name: 'LAV Advanced Model', features: ['Microcontroller Base: Yes', 'Low Voltage Protection: Yes', 'High Voltage Protection: Yes', 'Dry Run Protection: Yes', 'Digital Display: Yes', 'Warranty: 1 Year'] }, { img: '/imgs/product5.webp', video: '/video/home-video6.mp4', price: '₹ 5999', title: 'Motor Sensor Transister Base', name: 'LAV Basic Model', features: ['Microcontroller Base: No', 'Max Wire Length: 80M', 'Low Voltage Protection: Yes', 'Auto Mode: Yes', 'Manual Mode: Yes', 'Warranty: 1 Year'] }, { img: '/imgs/product2.webp', video: '/video/home-video7.mp4', price: '₹ 6499', title: 'Motor Sensor Supply Water', name: 'LAV Supply Water Model', features: ['Microcontroller Base: Yes', 'Body Type: Iron', 'HP: Up to 1.5 HP', 'Sump Protection: Yes', 'Low Voltage Protection: Yes', 'Digital Display: Yes', 'Warranty: 1 Year'] }, { img: '/imgs/about-img.webp', video: '/video/home-video8.mp4', price: '₹ 6999', title: 'Motor Sensor Advanced Model', name: 'LAV Advanced Model', features: ['Motor Model Support: Tulu, JET', 'High Voltage Protection: Yes', 'Dry Run Protection: Yes', 'Max Wire Length: 80M', 'Warranty: 1 Years'] }] as product}
+			<div
+				class="product-card flex flex-col rounded-xl bg-gray-800 bg-opacity-90 text-base-200 shadow-xl backdrop-blur-sm"
+			>
+				<!-- Top Section -->
+				<div class="mt-2">
+					<img src={product.img} alt="product" class="h-auto w-full rounded-t-xl object-cover" />
+					<h1 class="mt-2 text-center text-lg font-bold">{product.price}</h1>
 				</div>
-				<ul class="mt-2 list-inside list-disc text-sm text-base-300">
-					<li>Microcontroller Base: Yes</li>
-					<li>Low Voltage Protection: Yes</li>
-					<li>High Voltage Protection: Yes</li>
-					<li>Dry Run Protection: Yes</li>
-					<li>Digital Display: Yes</li>
-					<li>Warranty: 1 Year</li>
-				</ul>
-			</div>
-		</div>
-		<div class="product-card rounded-xl bg-gray-800 bg-opacity-90 text-base-200 shadow-xl backdrop-blur-sm">
-			<div class="mt-2">
-				<img
-					src="/imgs/product5.webp"
-					alt="product 2"
-					class="h-auto w-full rounded-t-xl object-cover"
-				/>
-				<h1 class="mt-2 text-center text-lg font-bold">₹ 5999</h1>
-			</div>
-			<div class="px-6 py-6 md:px-10 md:py-10 lg:px-16 lg:py-16">
-				<h2 class="mb-2 text-lg font-bold">Motor Sensor Transister Base</h2>
-				<div class="mb-1 text-sm">
-					<span class="font-semibold text-base-400">NAME OF PRODUCT: </span>
-					<span class="font-bold text-base-300">LAV Basic Model</span>
+
+				<!-- Bottom Section -->
+				<div
+					class="video-overlay group relative flex min-h-[400px] flex-grow flex-col justify-between overflow-hidden px-6 py-6 md:px-10 md:py-10 lg:px-16 lg:py-16"
+				>
+					<!-- Background Video -->
+					<video
+						class="absolute inset-0 z-0 h-full w-full object-cover transition-opacity duration-300"
+						muted
+						loop
+						playsinline
+						data-video
+					>
+						<source src={product.video} type="video/mp4" />
+					</video>
+
+					<!-- Text Content -->
+					<div class="relative z-10">
+						<h2 class="mb-2 text-lg font-bold">{product.title}</h2>
+						<div class="mb-1 text-sm">
+							<span class="font-semibold text-base-400">NAME OF PRODUCT: </span>
+							<span class="font-bold text-base-300">{product.name}</span>
+						</div>
+						<ul class="mt-2 list-inside list-disc text-sm text-base-300">
+							{#each product.features as feature}
+								<li>{feature}</li>
+							{/each}
+						</ul>
+					</div>
 				</div>
-				<ul class="mt-2 list-inside list-disc text-sm text-base-300">
-					<li>Microcontroller Base: No</li>
-					<li>Max Wire Length: 80M</li>
-					<li>Low Voltage Protection: Yes</li>
-					<li>Auto Mode: Yes</li>
-					<li>Manual Mode: Yes</li>
-					<li>Warranty: 1 Year</li>
-				</ul>
 			</div>
-		</div>
-		<div class="product-card rounded-xl bg-gray-800 bg-opacity-90 text-base-200 shadow-xl backdrop-blur-sm">
-			<div class="mt-2">
-				<img
-					src="/imgs/product2.webp"
-					alt="product 3"
-					class="h-auto w-full rounded-xl object-cover"
-				/>
-				<h1 class="mt-2 text-center text-lg font-bold">₹ 6499</h1>
-			</div>
-			<div class="px-6 py-6 md:px-10 md:py-10 lg:px-16 lg:py-16">
-				<h2 class="mb-2 text-lg font-bold">Motor Sensor Supply Water</h2>
-				<div class="mb-1 text-sm">
-					<span class="font-semibold text-base-400">NAME OF PRODUCT: </span>
-					<span class="font-bold text-base-300">LAV Supply Water Model</span>
-				</div>
-				<ul class="mt-2 list-inside list-disc text-sm text-base-300">
-					<li>Microcontroller Base: Yes</li>
-					<li>Body Type: Iron</li>
-					<li>HP: Up to 1.5 HP</li>
-					<li>Sump Protection: Yes</li>
-					<li>Low Voltage Protection: Yes</li>
-					<li>Digital Display: Yes</li>
-					<li>Warranty: 1 Year</li>
-				</ul>
-			</div>
-		</div>
-		<div class="product-card rounded-xl bg-gray-800 bg-opacity-90 text-base-200 shadow-xl backdrop-blur-sm">
-			<div class="mt-2">
-				<img
-					src="/imgs/about-img.webp"
-					alt="product 4"
-					class="h-auto w-full rounded-t-xl object-cover"
-				/>
-				<h1 class="mt-2 text-center text-lg font-bold">₹ 6999</h1>
-			</div>
-			<div class="px-6 py-6 md:px-10 md:py-10 lg:px-16 lg:py-16">
-				<h2 class="mb-2 text-lg font-bold">Motor Sensor Advanced Model</h2>
-				<div class="mb-1 text-sm">
-					<span class="font-semibold text-base-400">NAME OF PRODUCT: </span>
-					<span class="font-bold text-base-300">LAV Advanced Model</span>
-				</div>
-				<ul class="mt-2 list-inside list-disc text-sm text-base-300">
-					<li>Motor Model Support: Tulu, JET</li>
-					<li>High Voltage Protection: Yes</li>
-					<li>Dry Run Protection: Yes</li>
-					<li>Max Wire Length: 80M</li>
-					<li>Warranty: 1 Years</li>
-				</ul>
-			</div>
-		</div>
+		{/each}
 	</div>
-	<div class=" shop-now mt-10 flex justify-center">
+
+	<!-- CTA -->
+	<div class="shop-now mt-10 flex justify-center">
 		<a
 			href="/product"
 			class="rounded-lg bg-primary-600 px-6 py-2 font-semibold text-white transition duration-300 hover:bg-primary-700"
@@ -166,3 +122,19 @@
 		</a>
 	</div>
 </div>
+
+<style>
+	video[data-video] {
+		pointer-events: none;
+		filter: brightness(0.3) blur(2px); 
+	}
+
+	.video-overlay::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.126); 
+		z-index: 1;
+		pointer-events: none;
+	}
+</style>

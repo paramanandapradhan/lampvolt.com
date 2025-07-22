@@ -53,12 +53,12 @@
 <div class="relative h-screen w-full overflow-hidden">
 	<!-- Background Video -->
 	<video class="absolute left-0 top-0 h-full w-full object-cover" autoplay muted loop playsinline>
-		<source src="/video/home-video1.mp4" type="video/mp4" />
+		<source src="/video/home-video3.mp4" type="video/mp4" />
 		Your browser does not support the video tag.
 	</video>
 
 	<!-- Overlay for better text readability -->
-	<div class="absolute left-0 top-0 h-full w-full bg-black/60"></div>
+	<div class="absolute left-0 top-0 h-full w-full bg-black/80"></div>
 
 	<!-- Content Container -->
 	<div
