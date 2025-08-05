@@ -11,7 +11,7 @@
 			<ProductCard>
 				<div>
 					<img src="/imgs/product1.webp" alt="product" class="h-auto w-full object-cover" />
-					<h1 class="mt-2 text-center text-lg font-bold">₹ 2999</h1>
+					<h1 class="mt-2 text-center text-lg font-bold">₹ 2499</h1>
 				</div>
 				<div>
 					<h2 class="mb-2 text-lg font-bold">Motor Sensor Base Model</h2>
@@ -82,7 +82,7 @@
 			<ProductCard>
 				<div>
 					<img src="/imgs/about-img.webp" alt="product" class="h-auto w-full object-cover" />
-					<h1 class="mt-2 text-center text-lg font-bold">₹ 6999</h1>
+					<h1 class="mt-2 text-center text-lg font-bold">₹ 7499</h1>
 				</div>
 				<div>
 					<h2 class="mb-2 text-lg font-bold">Motor Sensor Advanced Model</h2>
