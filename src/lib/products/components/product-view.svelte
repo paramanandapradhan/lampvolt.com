@@ -98,7 +98,7 @@
 				</div>
 
                 <div class="mb-4  text-2xl font-bold text-base-200">
-					<span>Price: </span>{product.price}
+					<span>Price: </span> {product.price}
 				</div>
 				<!-- Important Points -->
 				<div class="mb-6">

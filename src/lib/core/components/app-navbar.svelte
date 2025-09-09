@@ -10,7 +10,7 @@
 	let {
 		hasBack,
 		disabledLogo,
-		logoImgSrc = 'lvt-logo2.svg',
+		logoImgSrc = '/lvt-logo2.svg',
 		logoImgClassName= '!h-6 !w-auto !object-contain !filter !brightness-0 !invert',
 		className = ' bg-gradient-to-r from-base-900 to-base-800 !h-20 border-b border-base-700',
 		hasLogo,
@@ -29,11 +29,30 @@
 	let activeMenu = $state('home');
 	let isMobileMenuOpen = $state(false);
 
+	// $effect(() => {
+	// 	let currentPath = page.url.pathname;
+	// 	let active = pageMenus.find((menu) => menu.url === currentPath);
+	// 	if (active) {
+	// 		activeMenu = active.id;
+	// 	}
+	// });
+
 	$effect(() => {
 		let currentPath = page.url.pathname;
-		let active = pageMenus.find((menu) => menu.url === currentPath);
+		let active;
+
+		// Handle root path (Home) with exact match
+		if (currentPath === '/' || currentPath === '/index.html') {
+			active = pageMenus.find((menu) => menu.url === '/');
+		} else {
+			// For non-root paths, use startsWith to match routes like /product/view
+			active = pageMenus.find((menu) => menu.url !== '/' && currentPath.startsWith(menu.url));
+		}
+
 		if (active) {
 			activeMenu = active.id;
+		} else {
+			activeMenu = 'home';
 		}
 	});
 
@@ -58,6 +77,7 @@
 
 {#snippet centerSnippet()}
 	<div class="hidden h-full items-center justify-center gap-4 lg:flex">
+		
 		{#each pageMenus as menu (menu.id)}
 			<a
 				href={menu.url}

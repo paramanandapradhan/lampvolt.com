@@ -21,7 +21,7 @@
 		>
 			<div class="flex items-center gap-4">
 				<a href="/">
-					<img src="lvt-logo2.svg" alt="logo" class=" !h-8 !w-auto !object-contain !filter !brightness-0 !invert" />
+					<img src="/lvt-logo2.svg" alt="logo" class=" !h-8 !w-auto !object-contain !filter !brightness-0 !invert" />
 				</a>
 				<!-- <h1 class="text-center font-black">Lampvolt</h1> -->
 			</div>

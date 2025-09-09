@@ -40,7 +40,7 @@
 									<li class="mb-1 text-xs">{point}</li>
 								{/each}
 							</ul>
-							<div class="mt-8 text-center">
+							<div class="mt-8 mb-4 text-center">
 								<a
 									href={`/product/view?productId=${product.id}`}
 									class="rounded bg-primary-500 px-4 py-2 text-white hover:bg-primary-600"

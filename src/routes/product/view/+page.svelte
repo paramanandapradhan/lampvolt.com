@@ -11,7 +11,7 @@
 </script>
 
 <div class="min-h-screen">
-	<AppNavbar hasLogo hasBack onBack={goBack} />
+	<AppNavbar hasLogo={true} hasBack onBack={goBack} />
 	<div>
 		<ProductView {productId} />
 	</div>

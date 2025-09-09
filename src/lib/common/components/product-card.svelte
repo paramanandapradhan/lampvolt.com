@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="transform rounded-md bg-base-700 shadow-sm transition-transform duration-300 hover:scale-105"
+	class="rounded-md bg-base-800 shadow-sm border border-base-700 hover:border-primary-400 duration-300 "
 >
 	<div class="w-full p-4">
 		{@render children()}
