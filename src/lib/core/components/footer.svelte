@@ -12,7 +12,7 @@
 	import Newsletter from '$lib/common/components/newsletter.svelte';
 </script>
 
-<div class="mx-auto my-8 px-4 md:my-12 md:px-16 lg:my-32 lg:px-32">
+<div class="mx-auto my-8 px-4 md:my-12 md:px-16 lg:my-32 ">
 	<div
 		class="text-base-200 grid grid-cols-1 gap-10 text-center md:grid-cols-2 lg:grid-cols-4 lg:text-left"
 	>

@@ -10,7 +10,7 @@
 </script>
 
 <div class="min-h-full">
-	<AppNavbar hasLogo  />
+	<AppNavbar hasLogo />
 
 	<div>
 		<HeroSection />
