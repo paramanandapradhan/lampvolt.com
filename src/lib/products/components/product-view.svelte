@@ -2,8 +2,9 @@
 	import { Button } from '@cloudparker/moldex.js';
 
 	import { mdiChevronLeft, mdiChevronRight } from '$lib/core/services/app-icons-service.js';
+	import { products } from '../service';
 
-	import { products } from '../../../data/products';
+	
 
 	type Props = {
 		productId?: string | null;

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import ProductCard from '$lib/common/components/product-card.svelte';
-	import { products } from '../../../data/products';
+	import { products } from '../service';
+	
 </script>
 
 <div class="relative flex min-h-screen items-center justify-center p-4 sm:p-6 lg:p-8">
