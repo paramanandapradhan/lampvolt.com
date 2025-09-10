@@ -63,7 +63,7 @@
 	<div class="mx-auto w-full max-w-7xl text-white">
 		{#if product}
 			<div class="mx-4 my-6 sm:mx-8 md:mx-16 md:my-12 lg:mx-32">
-				<h1 class="mb-4 text-4xl font-bold text-base-200">{product.title}</h1>
+				
 				
 
 				<!-- Image Carousel -->
@@ -81,8 +81,8 @@
 							<div class="absolute inset-y-0 right-0 flex items-center">
 								<Button onClick={nextImage} iconPath={mdiChevronRight} />
 							</div>
-							<div class="mt-4 flex justify-center space-x-2">
-								{#each product.images as _, index}
+							<div class="mt-4 flex justify-center space-x-2 overflow-x-auto">
+								<!-- {#each product.images as _, index}
 									<button
 										onclick={() => goToImage(index)}
 										aria-label={`Go to image ${index + 1}`}
@@ -91,12 +91,27 @@
 											? 'bg-blue-500'
 											: 'bg-gray-300'}"
 									></button>
+								{/each} -->
+
+								{#each product.images as image, index}
+									<button
+										onclick={() => goToImage(index)}
+										aria-label={`Go to image ${index + 1}`}
+										class="flex-shrink-0"
+									>
+										<img
+											src={image}
+											alt={`${product.title} - Thumbnail ${index + 1}`}
+											class="h-16 w-16 rounded-md object-cover border-2 {currentImageIndex === index ? 'border-blue-500' : 'border-gray-300'} hover:border-blue-400 transition-colors"
+										/>
+									</button>
 								{/each}
 							</div>
 						{/if}
 					</div>
 				</div>
 
+				<h1 class="mb-4 lg:mb-8 text-4xl font-bold text-base-200">{product.title}</h1>
                 <div class="mb-4  text-2xl font-bold text-base-200">
 					<span>Price: </span> {product.price}
 				</div>
