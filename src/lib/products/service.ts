@@ -2,6 +2,7 @@ export const products = [
   {
     id: '1',
     title: 'Motor Sensor Base Model',
+    desc:'Motor Sensor Base Model',
     price: '₹ 2499',
     images: ['/imgs/product1.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product5.webp'], // Placeholder for 5 images; replace with actual if available
     details: {
@@ -32,6 +33,7 @@ export const products = [
   {
     id: '2',
     title: 'Motor Sensor Advanced Model',
+    desc:'Motor Sensor Advanced Model',
     price: '₹ 7499',
     images: ['/imgs/about-img.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product5.webp'],
     details: {
@@ -62,6 +64,7 @@ export const products = [
   {
     id: '3',
     title: 'Motor Sensor Advanced Model',
+    desc:'',
     price: '₹ 7499',
     images: ['/imgs/about-img.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product5.webp'],
     details: {
@@ -92,6 +95,7 @@ export const products = [
   {
     id: '4',
     title: 'Motor Sensor Advanced Model',
+    desc:'',
     price: '₹ 7999',
     images: ['/imgs/about-img.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product5.webp'],
     details: {
@@ -122,6 +126,7 @@ export const products = [
   {
     id: '5',
     title: 'Motor Sensor Advanced Model 3 Phase Motor',
+    desc:'',
     price: '₹ 8999',
     images: ['/imgs/about-img.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product5.webp'],
     details: {
@@ -152,6 +157,7 @@ export const products = [
   {
     id: '6',
     title: 'Motor Sensor Advanced Model 3 Phase Motor',
+    desc:'',
     price: '₹ 9999',
     images: ['/imgs/about-img.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product5.webp'],
     details: {
@@ -182,6 +188,7 @@ export const products = [
   {
     id: '7',
     title: 'Motor Sensor Transister Base',
+    desc:'',
     price: '₹ 5999',
     images: ['/imgs/product5.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product1.webp'],
     details: {
@@ -212,6 +219,7 @@ export const products = [
   {
     id: '8',
     title: 'Motor Sensor Supply Water',
+    desc:'',
     price: '₹ 6499',
     images: ['/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product5.webp', '/imgs/product1.webp'],
     details: {
@@ -242,6 +250,7 @@ export const products = [
   {
     id: '9',
     title: 'Home Automation IR Base',
+    desc:'',
     price: '₹ 3499',
     images: ['/imgs/product4.webp', '/imgs/product5.webp', '/imgs/product2.webp', '/imgs/product3.webp', '/imgs/product1.webp'],
     details: {},
@@ -256,6 +265,7 @@ export const products = [
   {
     id: '10',
     title: 'Home Automation Wifi Base',
+    desc:'',
     price: '₹ 6999',
     images: ['/imgs/product3.webp', '/imgs/product4.webp', '/imgs/product1.webp', '/imgs/product5.webp', '/imgs/product2.webp'],
     details: {},

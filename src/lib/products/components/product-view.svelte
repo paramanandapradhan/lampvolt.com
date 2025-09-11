@@ -4,8 +4,6 @@
 	import { mdiChevronLeft, mdiChevronRight } from '$lib/core/services/app-icons-service.js';
 	import { products } from '../service';
 
-	
-
 	type Props = {
 		productId?: string | null;
 	};
@@ -63,9 +61,6 @@
 	<div class="mx-auto w-full max-w-7xl text-white">
 		{#if product}
 			<div class="mx-4 my-6 sm:mx-8 md:mx-16 md:my-12 lg:mx-32">
-				
-				
-
 				<!-- Image Carousel -->
 				<div class="relative mb-8">
 					<div class="relative px-0 lg:px-32">
@@ -102,7 +97,9 @@
 										<img
 											src={image}
 											alt={`${product.title} - Thumbnail ${index + 1}`}
-											class="h-16 w-16 rounded-md object-cover border-2 {currentImageIndex === index ? 'border-blue-500' : 'border-gray-300'} hover:border-blue-400 transition-colors"
+											class="h-16 w-16 rounded-md border-2 object-cover {currentImageIndex === index
+												? 'border-blue-500'
+												: 'border-gray-300'} transition-colors hover:border-blue-400"
 										/>
 									</button>
 								{/each}
@@ -111,9 +108,11 @@
 					</div>
 				</div>
 
-				<h1 class="mb-4 lg:mb-8 text-4xl font-bold text-base-200">{product.title}</h1>
-                <div class="mb-4  text-2xl font-bold text-base-200">
-					<span>Price: </span> {product.price}
+				<h1 class="mb-4 text-4xl font-bold text-base-200">{product.title}</h1>
+				<p class="mb-4 font-light text-base-400">{product.desc}</p>
+				<div class="mb-4 text-2xl font-bold text-base-200">
+					<span>Price: </span>
+					<span class="text-primary-500">{product.price}</span>
 				</div>
 				<!-- Important Points -->
 				<div class="mb-6">
