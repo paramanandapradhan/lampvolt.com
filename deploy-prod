@@ -1,0 +1,5 @@
+#!/bin/bash
+# Login to laltuchoudhury231@gmail.com
+echo "Login to : laltuchoudhury231@gmail.com"
+firebase login && firebase use lampvolt-com && npm run build && firebase deploy && echo "Visit Host : https://lampvolt.com"
+
