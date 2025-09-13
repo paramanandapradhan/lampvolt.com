@@ -1,7 +1,7 @@
 <script lang="ts">
 </script>
 
-<div class="relative flex min-h-screen items-center justify-center p-4 sm:p-6 lg:p-8">
+<div class="relative flex my-32 items-center justify-center p-4 sm:p-6 lg:p-8">
 	<div
 		aria-hidden="true"
 		class="absolute inset-x-0 top-0 -z-10 -translate-y-1/2 transform-gpu overflow-hidden opacity-30 blur-3xl"

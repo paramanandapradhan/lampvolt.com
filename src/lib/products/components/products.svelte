@@ -42,7 +42,7 @@
 							</ul>
 							<div class="mt-8 mb-4 text-center">
 								<a
-									href={`/product/view?productId=${product.id}`}
+									href={`/products/view?productId=${product.id}`}
 									class="rounded bg-primary-500 px-4 py-2 text-white hover:bg-primary-600"
 									>View Details</a
 								>
